@@ -19,7 +19,7 @@ def send_sms(targetnumber, message):
 			print 'please enter a valid US number in the format +1<10_digit_number>'
 			return
 		else:
-			message = client.messages.create(body = message,
+			message = client.messages.create(body = message + '#KapaTwilioBot',
 			to = targetnumber,    # Replace with your phone number
 			from_ = "+12028997890") # Replace with your Twilio number
 	except TwilioRestException as e:
